@@ -7,6 +7,7 @@ class Tmdb
   require 'deepopenstruct'
   
   @@api_key = ""
+  @@language = ""
   @@api_response = {}
   
   def self.api_key
