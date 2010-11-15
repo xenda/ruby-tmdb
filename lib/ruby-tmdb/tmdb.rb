@@ -21,7 +21,7 @@ class Tmdb
     "http://api.themoviedb.org/2.1/"
   end
   
-  def self.api_call(method, data, language = "en")
+  def self.api_call(method, data, language = "es")
     raise ArgumentError, "Tmdb.api_key must be set before using the API" if(Tmdb.api_key.nil? || Tmdb.api_key.empty?)
     url = Tmdb.base_api_url + method + '/' + language + '/json/' + Tmdb.api_key + '/' + CGI::escape(data.to_s)
     response = Tmdb.get_url(url)
